@@ -1,4 +1,5 @@
-# Brute-Force-Detection-Splunk
+ # 🔐 Brute Force Attack Detection using Splunk
+
 SOC Analyst Project: Detecting SSH brute force attempts using Splunk
 
 # 🔐 Brute Force Attack Detection using Splunk  

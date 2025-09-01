@@ -44,12 +44,15 @@ As part of my SOC Analyst learning, I built a small lab environment, simulated b
 5. **Alert Configuration**  
    - Configured real-time alert for brute force attempts  
 
----
+--
+## 🔍 Detection Logic
+Splunk SPL query used to detect brute force attempts:
 
-## 🔍 Detection Logic  
-Splunk SPL query used to detect brute force attempts:  
 ```spl
 index=soclab sourcetype=linux:auth "Failed password"
+| stats count by src_ip
+| where count > 10
+
 
 ## 📜 License  
 This project is licensed under the MIT License.
